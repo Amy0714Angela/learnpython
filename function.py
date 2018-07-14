@@ -77,8 +77,4 @@ x,y = move(100,100,60,math.pi/6);
 print(x,y);#151.96152422706632   70.0
 
 #practice
-def quadratic(a,b,c):
-
-
-
-
+#def quadratic(a,b,c):
