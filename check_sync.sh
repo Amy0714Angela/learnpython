@@ -76,7 +76,7 @@ for url  in $n_url  ;do
         if [ $url == "$n_url" ];then
             Curl=$i"/scroll-news/news1.html"
 	    e="news"
-        else
+        elsegate.cns.com.cn
             Curl=$i"/shipin/scroll/index.shtml"
             e="shipin"
         fi
