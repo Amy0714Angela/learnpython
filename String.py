@@ -9,13 +9,19 @@ print('''line1
 line2
 line3''');# '''...'''的格式表示多行内容，类似html中pre标签
 #对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符：
-print("获取单个字符的整数表示：",ord('A'));#65
+print("获取单个字符的整数表示：",ord('A'));#65  返回对应的ASCII 数值，或者 Unicode 数值，十进制整数
 print("获取单个字符的整数表示：",ord('中'));#20013
+singleStr = input("请输入单个字符：");
+print("获取输入单个字符的整数表示：",ord(singleStr));
 print("把整数编辑转成对应的字符：",chr(66));#B
 print("把整数编辑转成对应的字符：",chr(25991));#文
+numToChar = input("整数转字符，请输入整数：");
+print("整数转字符：",chr(int(numToChar)));
 print("把整数编辑转成十六进制：",'\u4e2d\u6587');#中文
 #字节类型数据
 print("字节类型数据：",b'ABC');#b'ABC'
+print("字节类型数据不能为汉字：",b'~');#b'~'  only can contain ASCII literal characters.
+#如果要在网络上传输，或者保存到磁盘上，就需要把str变为以字节为单位的bytes
 #以Unicode表示的str通过encode()方法可以编码为指定的bytes
 print('ABC'.encode('ascii'));#b'ABC'
 print('ABC'.encode('UTF-8'));#b'ABC'
@@ -41,7 +47,6 @@ print('Hi, %s,you have %d$.' % ('Amy',10000));#Hi, Amy,you have 10000$.
 print('%02d-%02d' % (3,1));#03-01
 print('%2d-%02d' % (3,1));# 3-01
 print('%2d-%2d' % (3,1));# 3- 1
-print('%2d-%2d' % (3,1));# 3- 1
 print('%0.2f' % 3.1415926)#3.14
 print('%.5f' % 3.14)#3.14000
 print('%.f' % 3);#3  ？？？？？？？？？？？？？？？？？
@@ -50,6 +55,16 @@ print('%f' % 3);#3.000000
 #%s永远起作用，它会把任何数据类型转换为字符串
 print('Age : %s . Gender : %s' % (25 ,True));#Age : 25 . Gender : True   将整数及布尔值转为字符串
 #%是一个普通字符
-print('growth rate: %d %%' % 7);#growth rate: 7 %
+print('growth rate: %d%%' % 7);#growth rate: 7%
+#practice:  %格式化
+score_lastyear = 72
+score_thisyear = 85
+percent =(score_thisyear - score_lastyear)/score_lastyear * 100;
+str = "小明成绩提升的百分点是: %.1f%%;" % percent;
+print(str);
+print("小明成绩提升的百分点是: %2.1f%%;" % percent);
+#practice： format格式化
+print("{0}成绩提升的百分点是: {1:.1f}%;".format("小明",percent));
+
 
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 print("Hello，Python 123！")
 
 # coding=utf-8
@@ -35,8 +37,8 @@ postdata = "网络故障"
 
 sendsmsurl="http://gate.cns.com.cn:8090/api/sendsms.php"
 headers = {"Content-type": "application/json"}
-data= '{"apptype":"onduty","msgtype":"1","sendto":"17310921023/limin","sendtime":"","content":"I succeeded,hahaha"}'
-res = requestsPractice.post(sendsmsurl, data=data, headers=headers)##post请求
+data= '{"apptype":"cscscs","msgtype":"1","sendto":"17310921023/amy","sendtime":"","content":"test"}'
+res = requests.post(sendsmsurl,data=data,headers=headers)##post请求,
 print(res.text)
 
 print("ok")
