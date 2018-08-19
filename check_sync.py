@@ -5,7 +5,7 @@ import datetime
 import subprocess
 import os
 import time
-import requests
+import requestsPractice
 import json
 #print(datetime.datetime.now().date());
 
@@ -35,8 +35,8 @@ postdata = "网络故障"
 
 sendsmsurl="http://gate.cns.com.cn:8090/api/sendsms.php"
 headers = {"Content-type": "application/json"}
-data= '{"apptype":"onduty","msgtype":"1","sendto":"15652615322/rendi","sendtime":"","content":"I succeeded,hahaha"}'
-res = requests.post(sendsmsurl,data=data,headers=headers)##post请求,
+data= '{"apptype":"onduty","msgtype":"1","sendto":"17310921023/limin","sendtime":"","content":"I succeeded,hahaha"}'
+res = requestsPractice.post(sendsmsurl, data=data, headers=headers)##post请求
 print(res.text)
 
 print("ok")
