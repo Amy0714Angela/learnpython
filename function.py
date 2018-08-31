@@ -77,4 +77,27 @@ x,y = move(100,100,60,math.pi/6);
 print(x,y);#151.96152422706632   70.0
 
 #practice
-#def quadratic(a,b,c):
+def quadratic(a,b,c):
+    if not isinstance(a,(int,float)):
+        raise TypeError("a is bad operand type");
+    if not isinstance(b,(int,float)):
+        raise TypeError("b is bad operand type");
+    if not isinstance(c,(int,float)):
+        raise TypeError("c is bad operand type");
+    d = b * b - 4 * a * c;
+    if d>0:
+        x1 = (-b + d)/(2 * a);
+        x2 = (-b - d )/(2 * a);
+        return x1,x2;
+    else:
+        x = -b / (2 * a);
+        return x;
+# 测试:
+print('quadratic(2, 3, 1) =', quadratic(2, 3, 1))
+print('quadratic(1, 3, -4) =', quadratic(1, 3, -4))
+if quadratic(2, 3, 1) != (-0.5, -1.0):
+    print('2,3,1测试失败')
+elif quadratic(1, 3, -4) != (1.0, -4.0):
+    print('1,3,-4测试失败')
+else:
+    print('测试成功')

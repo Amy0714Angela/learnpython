@@ -7,7 +7,7 @@ import datetime
 import subprocess
 import os
 import time
-import requests
+import requestsPractice
 import json
 #print(datetime.datetime.now().date());
 
