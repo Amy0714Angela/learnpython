@@ -24,12 +24,14 @@ print([t for t in set([tuple(d.items()) for d in l])]);#转成list
 print("去重但不能保留原有排序，每执行一次此文件得到的顺序都不一样，共有6种 : ",[dict(t) for t in set([tuple(d.items()) for d in l])]);#将tuple元组转成字典
 
 #去重并保留原有排序
-seen = set()
+seen = set();#set类型只存储key，不存储value
 new_l = []
 for d in l:
     t = tuple(d.items())
+    print("dict转tuple后：",t);
     if t not in seen:
         seen.add(t)
         new_l.append(d)
 #  [{'a': 423, 'b': 1234}, {'a': 3222, 'b': 1234}, {'a': 123, 'b': 1234}]
 print("去重并保留原有排序：",new_l);
+print("seen：",seen);

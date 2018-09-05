@@ -5,7 +5,7 @@ print(r.status_code);
 print(r.text);
 print(r.url);
 #url传入参数
-r_douban = requests.get("http://www.douban.com/search",params={"q":"python","cat":"1001"})
+r_douban = requests.get("http://www.douban.com/search", params={"q": "python", "cat": "1001"})
 print(r_douban.status_code);
 print(r_douban.text);
 print(r_douban.url);
