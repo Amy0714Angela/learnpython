@@ -1,1 +1,4 @@
-__pycache__
+__pycache__/*
+RSS_Python/*
+RSS_Python/__pycache__/*
+.idea/*
